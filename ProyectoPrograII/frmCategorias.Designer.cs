@@ -38,6 +38,7 @@
             label2 = new Label();
             dataGridView1 = new DataGridView();
             Categorias = new DataGridViewTextBoxColumn();
+            Descripcion = new DataGridViewTextBoxColumn();
             asd = new DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -111,7 +112,7 @@
             label1.Dock = DockStyle.Top;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(822, 76);
+            label1.Size = new Size(984, 76);
             label1.TabIndex = 6;
             // 
             // label2
@@ -128,10 +129,10 @@
             // 
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Categorias, asd });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Categorias, Descripcion, asd });
             dataGridView1.Location = new Point(478, 120);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(314, 275);
+            dataGridView1.Size = new Size(455, 275);
             dataGridView1.TabIndex = 8;
             // 
             // Categorias
@@ -139,6 +140,12 @@
             Categorias.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             Categorias.HeaderText = "Categorias";
             Categorias.Name = "Categorias";
+            // 
+            // Descripcion
+            // 
+            Descripcion.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Descripcion.HeaderText = "Descripcion";
+            Descripcion.Name = "Descripcion";
             // 
             // asd
             // 
@@ -151,7 +158,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
-            ClientSize = new Size(822, 433);
+            ClientSize = new Size(984, 433);
             Controls.Add(dataGridView1);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -185,6 +192,7 @@
         private Label label2;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn Categorias;
+        private DataGridViewTextBoxColumn Descripcion;
         private DataGridViewButtonColumn asd;
     }
 }

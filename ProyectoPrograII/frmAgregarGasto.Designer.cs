@@ -55,7 +55,7 @@
             grpDetalles.Controls.Add(lblDescripcion);
             grpDetalles.Controls.Add(lblMonto);
             grpDetalles.Font = new Font("Microsoft Sans Serif", 12F);
-            grpDetalles.Location = new Point(151, 86);
+            grpDetalles.Location = new Point(55, 83);
             grpDetalles.Margin = new Padding(4, 3, 4, 3);
             grpDetalles.Name = "grpDetalles";
             grpDetalles.Padding = new Padding(4, 3, 4, 3);
@@ -144,7 +144,7 @@
             // btnGuardar
             // 
             btnGuardar.Font = new Font("Microsoft Sans Serif", 12F);
-            btnGuardar.Location = new Point(367, 395);
+            btnGuardar.Location = new Point(271, 392);
             btnGuardar.Margin = new Padding(4, 3, 4, 3);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(117, 35);
@@ -155,7 +155,7 @@
             // btnCancelar
             // 
             btnCancelar.Font = new Font("Microsoft Sans Serif", 12F);
-            btnCancelar.Location = new Point(243, 395);
+            btnCancelar.Location = new Point(147, 392);
             btnCancelar.Margin = new Padding(4, 3, 4, 3);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(117, 35);
@@ -166,10 +166,10 @@
             // label1
             // 
             label1.BackColor = SystemColors.GradientActiveCaption;
-            label1.Font = new Font("Segoe UI", 15F);
-            label1.Location = new Point(12, 20);
+            label1.Font = new Font("Segoe UI", 25F);
+            label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(158, 30);
+            label1.Size = new Size(263, 55);
             label1.TabIndex = 7;
             label1.Text = "Agregar Gasto";
             // 
@@ -179,7 +179,7 @@
             label2.Dock = DockStyle.Top;
             label2.Location = new Point(0, 0);
             label2.Name = "label2";
-            label2.Size = new Size(731, 64);
+            label2.Size = new Size(556, 64);
             label2.TabIndex = 8;
             // 
             // frmAgregarGasto
@@ -187,7 +187,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
-            ClientSize = new Size(731, 455);
+            ClientSize = new Size(556, 455);
             Controls.Add(label1);
             Controls.Add(btnCancelar);
             Controls.Add(btnGuardar);

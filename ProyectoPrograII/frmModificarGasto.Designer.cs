@@ -41,14 +41,7 @@
             btnCancelar = new Button();
             label1 = new Label();
             label2 = new Label();
-            dataGridView1 = new DataGridView();
-            asd = new DataGridViewCheckBoxColumn();
-            Descripcion = new DataGridViewTextBoxColumn();
-            Categoria = new DataGridViewTextBoxColumn();
-            Fecha = new DataGridViewTextBoxColumn();
-            Monto = new DataGridViewTextBoxColumn();
             grpDetalles.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // grpDetalles
@@ -176,69 +169,25 @@
             label1.Dock = DockStyle.Top;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(1136, 79);
+            label1.Size = new Size(520, 79);
             label1.TabIndex = 14;
             // 
             // label2
             // 
             label2.BackColor = SystemColors.GradientActiveCaption;
             label2.Font = new Font("Segoe UI", 25F);
-            label2.Location = new Point(30, 9);
+            label2.Location = new Point(12, 9);
             label2.Name = "label2";
             label2.Size = new Size(241, 44);
             label2.TabIndex = 15;
             label2.Text = "Editar Gastos";
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { asd, Descripcion, Categoria, Fecha, Monto });
-            dataGridView1.Location = new Point(511, 120);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(565, 320);
-            dataGridView1.TabIndex = 16;
-            // 
-            // asd
-            // 
-            asd.HeaderText = "";
-            asd.Name = "asd";
-            asd.Width = 35;
-            // 
-            // Descripcion
-            // 
-            Descripcion.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Descripcion.FillWeight = 12.82051F;
-            Descripcion.HeaderText = "Descripcion";
-            Descripcion.Name = "Descripcion";
-            // 
-            // Categoria
-            // 
-            Categoria.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Categoria.FillWeight = 12.82051F;
-            Categoria.HeaderText = "Categoria";
-            Categoria.Name = "Categoria";
-            // 
-            // Fecha
-            // 
-            Fecha.FillWeight = 274.358978F;
-            Fecha.HeaderText = "Fecha de Registro";
-            Fecha.Name = "Fecha";
-            Fecha.Width = 150;
-            // 
-            // Monto
-            // 
-            Monto.HeaderText = "Monto";
-            Monto.Name = "Monto";
-            Monto.Width = 80;
             // 
             // frmModificarGasto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
-            ClientSize = new Size(1136, 485);
-            Controls.Add(dataGridView1);
+            ClientSize = new Size(520, 485);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnCancelar);
@@ -252,7 +201,6 @@
             Text = "frmMosificarGasto";
             grpDetalles.ResumeLayout(false);
             grpDetalles.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
 
         }
@@ -272,11 +220,5 @@
         public System.Windows.Forms.Button btnCancelar;
         private Label label1;
         private Label label2;
-        private DataGridView dataGridView1;
-        private DataGridViewCheckBoxColumn asd;
-        private DataGridViewTextBoxColumn Descripcion;
-        private DataGridViewTextBoxColumn Categoria;
-        private DataGridViewTextBoxColumn Fecha;
-        private DataGridViewTextBoxColumn Monto;
     }
 }

@@ -37,6 +37,12 @@
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             dataGridView1 = new DataGridView();
+            Descripcion = new DataGridViewTextBoxColumn();
+            Categoria = new DataGridViewTextBoxColumn();
+            Fecha = new DataGridViewTextBoxColumn();
+            Monto = new DataGridViewTextBoxColumn();
+            Editar = new DataGridViewButtonColumn();
+            Borrar = new DataGridViewButtonColumn();
             iconButton1 = new FontAwesome.Sharp.IconButton();
             iconButton2 = new FontAwesome.Sharp.IconButton();
             iconButton3 = new FontAwesome.Sharp.IconButton();
@@ -44,12 +50,8 @@
             dateTimePicker1 = new DateTimePicker();
             dateTimePicker2 = new DateTimePicker();
             dateTimePicker3 = new DateTimePicker();
-            iconButton5 = new FontAwesome.Sharp.IconButton();
             label7 = new Label();
-            Descripcion = new DataGridViewTextBoxColumn();
-            Categoria = new DataGridViewTextBoxColumn();
-            Fecha = new DataGridViewTextBoxColumn();
-            Monto = new DataGridViewTextBoxColumn();
+            iconButton4 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -57,7 +59,7 @@
             // 
             label1.BackColor = SystemColors.GradientActiveCaption;
             label1.Font = new Font("Segoe UI", 25F);
-            label1.Location = new Point(21, 9);
+            label1.Location = new Point(15, 43);
             label1.Name = "label1";
             label1.Size = new Size(131, 44);
             label1.TabIndex = 0;
@@ -66,6 +68,7 @@
             // 
             // label2
             // 
+            label2.BackColor = SystemColors.GradientActiveCaption;
             label2.Font = new Font("Segoe UI", 12F);
             label2.Location = new Point(15, 158);
             label2.Name = "label2";
@@ -76,7 +79,7 @@
             // label3
             // 
             label3.Font = new Font("Segoe UI", 15F);
-            label3.Location = new Point(451, 410);
+            label3.Location = new Point(444, 443);
             label3.Name = "label3";
             label3.Size = new Size(356, 34);
             label3.TabIndex = 2;
@@ -93,6 +96,7 @@
             // 
             // label5
             // 
+            label5.BackColor = SystemColors.GradientActiveCaption;
             label5.Font = new Font("Segoe UI", 12F);
             label5.Location = new Point(15, 209);
             label5.Name = "label5";
@@ -102,6 +106,7 @@
             // 
             // label6
             // 
+            label6.BackColor = SystemColors.GradientActiveCaption;
             label6.Font = new Font("Segoe UI", 12F);
             label6.Location = new Point(15, 257);
             label6.Name = "label6";
@@ -112,7 +117,7 @@
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 12F);
-            textBox1.Location = new Point(802, 412);
+            textBox1.Location = new Point(795, 445);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 29);
             textBox1.TabIndex = 6;
@@ -130,11 +135,51 @@
             // 
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Descripcion, Categoria, Fecha, Monto });
-            dataGridView1.Location = new Point(452, 104);
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Descripcion, Categoria, Fecha, Monto, Editar, Borrar });
+            dataGridView1.Location = new Point(517, 65);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(720, 302);
+            dataGridView1.Size = new Size(642, 372);
             dataGridView1.TabIndex = 12;
+            dataGridView1.CellPainting += dataGridView1_CellPainting;
+            // 
+            // Descripcion
+            // 
+            Descripcion.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Descripcion.FillWeight = 12.82051F;
+            Descripcion.HeaderText = "Descripcion";
+            Descripcion.Name = "Descripcion";
+            // 
+            // Categoria
+            // 
+            Categoria.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Categoria.FillWeight = 12.82051F;
+            Categoria.HeaderText = "Categoria";
+            Categoria.Name = "Categoria";
+            // 
+            // Fecha
+            // 
+            Fecha.FillWeight = 274.358978F;
+            Fecha.HeaderText = "Fecha de Registro";
+            Fecha.Name = "Fecha";
+            Fecha.Width = 150;
+            // 
+            // Monto
+            // 
+            Monto.HeaderText = "Monto";
+            Monto.Name = "Monto";
+            Monto.Width = 80;
+            // 
+            // Editar
+            // 
+            Editar.HeaderText = "";
+            Editar.Name = "Editar";
+            Editar.Width = 35;
+            // 
+            // Borrar
+            // 
+            Borrar.HeaderText = "";
+            Borrar.Name = "Borrar";
+            Borrar.Width = 35;
             // 
             // iconButton1
             // 
@@ -179,7 +224,7 @@
             // 
             comboBox4.Font = new Font("Segoe UI", 12F);
             comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(671, 412);
+            comboBox4.Location = new Point(664, 445);
             comboBox4.Name = "comboBox4";
             comboBox4.Size = new Size(104, 29);
             comboBox4.TabIndex = 17;
@@ -212,57 +257,30 @@
             dateTimePicker3.Size = new Size(121, 26);
             dateTimePicker3.TabIndex = 20;
             // 
-            // iconButton5
-            // 
-            iconButton5.Font = new Font("Segoe UI", 15F);
-            iconButton5.IconChar = FontAwesome.Sharp.IconChar.PersonRunning;
-            iconButton5.IconColor = Color.Black;
-            iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton5.IconSize = 30;
-            iconButton5.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton5.Location = new Point(35, 412);
-            iconButton5.Name = "iconButton5";
-            iconButton5.Size = new Size(89, 39);
-            iconButton5.TabIndex = 22;
-            iconButton5.Text = "Salir";
-            iconButton5.TextAlign = ContentAlignment.MiddleRight;
-            iconButton5.UseVisualStyleBackColor = true;
-            // 
             // label7
             // 
             label7.BackColor = SystemColors.GradientActiveCaption;
-            label7.Dock = DockStyle.Top;
+            label7.Dock = DockStyle.Left;
             label7.Location = new Point(0, 0);
             label7.Name = "label7";
-            label7.Size = new Size(1209, 80);
+            label7.Size = new Size(438, 497);
             label7.TabIndex = 23;
             // 
-            // Descripcion
+            // iconButton4
             // 
-            Descripcion.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Descripcion.FillWeight = 12.82051F;
-            Descripcion.HeaderText = "Descripcion";
-            Descripcion.Name = "Descripcion";
-            // 
-            // Categoria
-            // 
-            Categoria.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Categoria.FillWeight = 12.82051F;
-            Categoria.HeaderText = "Categoria";
-            Categoria.Name = "Categoria";
-            // 
-            // Fecha
-            // 
-            Fecha.FillWeight = 274.358978F;
-            Fecha.HeaderText = "Fecha de Registro";
-            Fecha.Name = "Fecha";
-            Fecha.Width = 150;
-            // 
-            // Monto
-            // 
-            Monto.HeaderText = "Monto";
-            Monto.Name = "Monto";
-            Monto.Width = 80;
+            iconButton4.Font = new Font("Segoe UI", 12F);
+            iconButton4.IconChar = FontAwesome.Sharp.IconChar.Add;
+            iconButton4.IconColor = Color.Black;
+            iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton4.IconSize = 25;
+            iconButton4.ImageAlign = ContentAlignment.MiddleLeft;
+            iconButton4.Location = new Point(1059, 27);
+            iconButton4.Name = "iconButton4";
+            iconButton4.Size = new Size(100, 32);
+            iconButton4.TabIndex = 24;
+            iconButton4.Text = "Agregar";
+            iconButton4.TextAlign = ContentAlignment.MiddleRight;
+            iconButton4.UseVisualStyleBackColor = true;
             // 
             // frmVerGastos
             // 
@@ -270,7 +288,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(1209, 497);
-            Controls.Add(iconButton5);
+            Controls.Add(iconButton4);
             Controls.Add(dateTimePicker3);
             Controls.Add(dateTimePicker2);
             Controls.Add(dateTimePicker1);
@@ -313,11 +331,13 @@
         private DateTimePicker dateTimePicker1;
         private DateTimePicker dateTimePicker2;
         private DateTimePicker dateTimePicker3;
-        private FontAwesome.Sharp.IconButton iconButton5;
         private Label label7;
         private DataGridViewTextBoxColumn Descripcion;
         private DataGridViewTextBoxColumn Categoria;
         private DataGridViewTextBoxColumn Fecha;
         private DataGridViewTextBoxColumn Monto;
+        private DataGridViewButtonColumn Editar;
+        private DataGridViewButtonColumn Borrar;
+        private FontAwesome.Sharp.IconButton iconButton4;
     }
 }
