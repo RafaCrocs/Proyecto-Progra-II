@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             grpDetalles = new GroupBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txtId = new TextBox();
+            txtApellido = new TextBox();
             btnCancelar = new Button();
             btnGuardar = new Button();
-            txtMonto = new TextBox();
+            txtNombre = new TextBox();
             lblCategoria = new Label();
             lblDescripcion = new Label();
             lblMonto = new Label();
@@ -43,112 +43,114 @@
             // grpDetalles
             // 
             grpDetalles.BackColor = SystemColors.GradientActiveCaption;
-            grpDetalles.Controls.Add(textBox2);
-            grpDetalles.Controls.Add(textBox1);
+            grpDetalles.Controls.Add(txtId);
+            grpDetalles.Controls.Add(txtApellido);
             grpDetalles.Controls.Add(btnCancelar);
             grpDetalles.Controls.Add(btnGuardar);
-            grpDetalles.Controls.Add(txtMonto);
+            grpDetalles.Controls.Add(txtNombre);
             grpDetalles.Controls.Add(lblCategoria);
             grpDetalles.Controls.Add(lblDescripcion);
             grpDetalles.Controls.Add(lblMonto);
             grpDetalles.Font = new Font("Microsoft Sans Serif", 12F);
-            grpDetalles.Location = new Point(14, 42);
-            grpDetalles.Margin = new Padding(5, 4, 5, 4);
+            grpDetalles.Location = new Point(12, 32);
+            grpDetalles.Margin = new Padding(4, 3, 4, 3);
             grpDetalles.Name = "grpDetalles";
-            grpDetalles.Padding = new Padding(5, 4, 5, 4);
-            grpDetalles.Size = new Size(464, 384);
+            grpDetalles.Padding = new Padding(4, 3, 4, 3);
+            grpDetalles.Size = new Size(406, 288);
             grpDetalles.TabIndex = 2;
             grpDetalles.TabStop = false;
             grpDetalles.Text = "Información del Usuario";
             // 
-            // textBox2
+            // txtId
             // 
-            textBox2.Location = new Point(146, 175);
-            textBox2.Margin = new Padding(5, 4, 5, 4);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(292, 30);
-            textBox2.TabIndex = 9;
-            textBox2.TextAlign = HorizontalAlignment.Right;
+            txtId.Location = new Point(128, 131);
+            txtId.Margin = new Padding(4, 3, 4, 3);
+            txtId.Name = "txtId";
+            txtId.Size = new Size(256, 26);
+            txtId.TabIndex = 9;
             // 
-            // textBox1
+            // txtApellido
             // 
-            textBox1.Location = new Point(146, 111);
-            textBox1.Margin = new Padding(5, 4, 5, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(292, 30);
-            textBox1.TabIndex = 8;
-            textBox1.TextAlign = HorizontalAlignment.Right;
+            txtApellido.Location = new Point(128, 83);
+            txtApellido.Margin = new Padding(4, 3, 4, 3);
+            txtApellido.Name = "txtApellido";
+            txtApellido.Size = new Size(256, 26);
+            txtApellido.TabIndex = 8;
             // 
             // btnCancelar
             // 
             btnCancelar.Font = new Font("Microsoft Sans Serif", 12F);
-            btnCancelar.Location = new Point(95, 252);
-            btnCancelar.Margin = new Padding(5, 4, 5, 4);
+            btnCancelar.Location = new Point(83, 189);
+            btnCancelar.Margin = new Padding(4, 3, 4, 3);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(126, 47);
+            btnCancelar.Size = new Size(110, 35);
             btnCancelar.TabIndex = 7;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnGuardar
             // 
             btnGuardar.Font = new Font("Microsoft Sans Serif", 12F);
-            btnGuardar.Location = new Point(228, 252);
-            btnGuardar.Margin = new Padding(5, 4, 5, 4);
+            btnGuardar.Location = new Point(200, 189);
+            btnGuardar.Margin = new Padding(4, 3, 4, 3);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(134, 47);
+            btnGuardar.Size = new Size(117, 35);
             btnGuardar.TabIndex = 6;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
-            // txtMonto
+            // txtNombre
             // 
-            txtMonto.Location = new Point(146, 47);
-            txtMonto.Margin = new Padding(5, 4, 5, 4);
-            txtMonto.Name = "txtMonto";
-            txtMonto.Size = new Size(292, 30);
-            txtMonto.TabIndex = 1;
-            txtMonto.TextAlign = HorizontalAlignment.Right;
+            txtNombre.Location = new Point(128, 35);
+            txtNombre.Margin = new Padding(4, 3, 4, 3);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(256, 26);
+            txtNombre.TabIndex = 1;
             // 
             // lblCategoria
             // 
             lblCategoria.AutoSize = true;
-            lblCategoria.Location = new Point(29, 120);
-            lblCategoria.Margin = new Padding(5, 0, 5, 0);
+            lblCategoria.Location = new Point(25, 90);
+            lblCategoria.Margin = new Padding(4, 0, 4, 0);
             lblCategoria.Name = "lblCategoria";
-            lblCategoria.Size = new Size(88, 25);
+            lblCategoria.Size = new Size(69, 20);
             lblCategoria.TabIndex = 2;
             lblCategoria.Text = "Apellido:";
             // 
             // lblDescripcion
             // 
             lblDescripcion.AutoSize = true;
-            lblDescripcion.Location = new Point(17, 184);
-            lblDescripcion.Margin = new Padding(5, 0, 5, 0);
+            lblDescripcion.Location = new Point(15, 138);
+            lblDescripcion.Margin = new Padding(4, 0, 4, 0);
             lblDescripcion.Name = "lblDescripcion";
-            lblDescripcion.Size = new Size(131, 25);
+            lblDescripcion.Size = new Size(107, 20);
             lblDescripcion.TabIndex = 1;
             lblDescripcion.Text = "Identificacion:";
             // 
             // lblMonto
             // 
             lblMonto.AutoSize = true;
-            lblMonto.Location = new Point(29, 52);
-            lblMonto.Margin = new Padding(5, 0, 5, 0);
+            lblMonto.Location = new Point(25, 39);
+            lblMonto.Margin = new Padding(4, 0, 4, 0);
             lblMonto.Name = "lblMonto";
-            lblMonto.Size = new Size(87, 25);
+            lblMonto.Size = new Size(69, 20);
             lblMonto.TabIndex = 0;
             lblMonto.Text = "Nombre:";
             // 
             // AgregarUsuario
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
-            ClientSize = new Size(526, 450);
+            ClientSize = new Size(460, 338);
             Controls.Add(grpDetalles);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "AgregarUsuario";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AgregarUsuario";
+            Load += AgregarUsuario_Load;
             grpDetalles.ResumeLayout(false);
             grpDetalles.PerformLayout();
             ResumeLayout(false);
@@ -157,11 +159,11 @@
         #endregion
 
         private GroupBox grpDetalles;
-        public TextBox textBox2;
-        public TextBox textBox1;
+        public TextBox txtId;
+        public TextBox txtApellido;
         public Button btnCancelar;
         public Button btnGuardar;
-        public TextBox txtMonto;
+        public TextBox txtNombre;
         private Label lblCategoria;
         private Label lblDescripcion;
         private Label lblMonto;

@@ -16,5 +16,36 @@ namespace ProyectoPrograII
         {
             InitializeComponent();
         }
+
+
+        private void AbrirFormulario(Form formulario)
+        {
+            if (Contenedor.Controls.Count > 0)
+            {
+                Contenedor.Controls.RemoveAt(0);
+            }
+            formulario.TopLevel = false;
+            formulario.FormBorderStyle = FormBorderStyle.None;
+            formulario.Dock = DockStyle.Fill;
+            formulario.BackColor = Color.White;
+            Contenedor.Controls.Add(formulario);
+            formulario.Show();
+        }
+
+        private void MenuUsuarios_Click(object sender, EventArgs e)
+        {
+            
+            AbrirFormulario(new frmUsuarios());
+        }
+
+        private void MenuVerGastos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new frmVerGastos());
+        }
+
+        private void MenuCategorias_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new frmCategorias());
+        }
     }
 }

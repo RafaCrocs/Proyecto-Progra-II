@@ -28,20 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            FontAwesome.Sharp.IconMenuItem iconMenuItem2;
+            FontAwesome.Sharp.IconMenuItem MenuUsuarios;
             dateTimePicker1 = new DateTimePicker();
             iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
             menuStrip1 = new MenuStrip();
-            iconMenuItem3 = new FontAwesome.Sharp.IconMenuItem();
-            iconMenuItem4 = new FontAwesome.Sharp.IconMenuItem();
+            MenuVerGastos = new FontAwesome.Sharp.IconMenuItem();
+            MenuCategorias = new FontAwesome.Sharp.IconMenuItem();
             menuStrip2 = new MenuStrip();
             sistemaDeGestionDeGastosToolStripMenuItem1 = new ToolStripMenuItem();
-            panel1 = new Panel();
-            iconMenuItem2 = new FontAwesome.Sharp.IconMenuItem();
+            Contenedor = new Panel();
+            MenuUsuarios = new FontAwesome.Sharp.IconMenuItem();
             menuStrip1.SuspendLayout();
             menuStrip2.SuspendLayout();
-            panel1.SuspendLayout();
+            Contenedor.SuspendLayout();
             SuspendLayout();
+            // 
+            // MenuUsuarios
+            // 
+            MenuUsuarios.Font = new Font("Segoe UI", 15F);
+            MenuUsuarios.IconChar = FontAwesome.Sharp.IconChar.Male;
+            MenuUsuarios.IconColor = Color.Black;
+            MenuUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            MenuUsuarios.IconSize = 35;
+            MenuUsuarios.ImageScaling = ToolStripItemImageScaling.None;
+            MenuUsuarios.Name = "MenuUsuarios";
+            MenuUsuarios.Size = new Size(134, 46);
+            MenuUsuarios.Text = "Usuarios";
+            MenuUsuarios.Click += MenuUsuarios_Click;
             // 
             // dateTimePicker1
             // 
@@ -64,48 +77,38 @@
             // 
             menuStrip1.AutoSize = false;
             menuStrip1.BackColor = SystemColors.GradientInactiveCaption;
-            menuStrip1.Items.AddRange(new ToolStripItem[] { iconMenuItem2, iconMenuItem3, iconMenuItem4 });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { MenuUsuarios, MenuVerGastos, MenuCategorias });
             menuStrip1.Location = new Point(0, 57);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1002, 50);
             menuStrip1.TabIndex = 9;
             menuStrip1.Text = "menuStrip1";
             // 
-            // iconMenuItem2
+            // MenuVerGastos
             // 
-            iconMenuItem2.Font = new Font("Segoe UI", 15F);
-            iconMenuItem2.IconChar = FontAwesome.Sharp.IconChar.Male;
-            iconMenuItem2.IconColor = Color.Black;
-            iconMenuItem2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconMenuItem2.IconSize = 35;
-            iconMenuItem2.ImageScaling = ToolStripItemImageScaling.None;
-            iconMenuItem2.Name = "iconMenuItem2";
-            iconMenuItem2.Size = new Size(134, 46);
-            iconMenuItem2.Text = "Usuarios";
+            MenuVerGastos.Font = new Font("Segoe UI", 15F);
+            MenuVerGastos.IconChar = FontAwesome.Sharp.IconChar.MoneyBill;
+            MenuVerGastos.IconColor = Color.Black;
+            MenuVerGastos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            MenuVerGastos.IconSize = 35;
+            MenuVerGastos.ImageScaling = ToolStripItemImageScaling.None;
+            MenuVerGastos.Name = "MenuVerGastos";
+            MenuVerGastos.Size = new Size(151, 46);
+            MenuVerGastos.Text = "Ver Gastos";
+            MenuVerGastos.Click += MenuVerGastos_Click;
             // 
-            // iconMenuItem3
+            // MenuCategorias
             // 
-            iconMenuItem3.Font = new Font("Segoe UI", 15F);
-            iconMenuItem3.IconChar = FontAwesome.Sharp.IconChar.MoneyBill;
-            iconMenuItem3.IconColor = Color.Black;
-            iconMenuItem3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconMenuItem3.IconSize = 35;
-            iconMenuItem3.ImageScaling = ToolStripItemImageScaling.None;
-            iconMenuItem3.Name = "iconMenuItem3";
-            iconMenuItem3.Size = new Size(151, 46);
-            iconMenuItem3.Text = "Ver Gastos";
-            // 
-            // iconMenuItem4
-            // 
-            iconMenuItem4.Font = new Font("Segoe UI", 15F);
-            iconMenuItem4.IconChar = FontAwesome.Sharp.IconChar.Newspaper;
-            iconMenuItem4.IconColor = Color.Black;
-            iconMenuItem4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconMenuItem4.IconSize = 35;
-            iconMenuItem4.ImageScaling = ToolStripItemImageScaling.None;
-            iconMenuItem4.Name = "iconMenuItem4";
-            iconMenuItem4.Size = new Size(152, 46);
-            iconMenuItem4.Text = "Categorias";
+            MenuCategorias.Font = new Font("Segoe UI", 15F);
+            MenuCategorias.IconChar = FontAwesome.Sharp.IconChar.Newspaper;
+            MenuCategorias.IconColor = Color.Black;
+            MenuCategorias.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            MenuCategorias.IconSize = 35;
+            MenuCategorias.ImageScaling = ToolStripItemImageScaling.None;
+            MenuCategorias.Name = "MenuCategorias";
+            MenuCategorias.Size = new Size(152, 46);
+            MenuCategorias.Text = "Categorias";
+            MenuCategorias.Click += MenuCategorias_Click;
             // 
             // menuStrip2
             // 
@@ -125,14 +128,14 @@
             sistemaDeGestionDeGastosToolStripMenuItem1.Size = new Size(380, 53);
             sistemaDeGestionDeGastosToolStripMenuItem1.Text = "Sistema de Gestion de Gastos";
             // 
-            // panel1
+            // Contenedor
             // 
-            panel1.Controls.Add(dateTimePicker1);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 107);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1002, 401);
-            panel1.TabIndex = 11;
+            Contenedor.Controls.Add(dateTimePicker1);
+            Contenedor.Dock = DockStyle.Fill;
+            Contenedor.Location = new Point(0, 107);
+            Contenedor.Name = "Contenedor";
+            Contenedor.Size = new Size(1002, 401);
+            Contenedor.TabIndex = 11;
             // 
             // frm_Inicio
             // 
@@ -140,7 +143,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(1002, 508);
-            Controls.Add(panel1);
+            Controls.Add(Contenedor);
             Controls.Add(menuStrip1);
             Controls.Add(menuStrip2);
             MainMenuStrip = menuStrip1;
@@ -150,7 +153,7 @@
             menuStrip1.PerformLayout();
             menuStrip2.ResumeLayout(false);
             menuStrip2.PerformLayout();
-            panel1.ResumeLayout(false);
+            Contenedor.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -158,11 +161,11 @@
         private DateTimePicker dateTimePicker1;
         private FontAwesome.Sharp.IconMenuItem iconMenuItem1;
         private MenuStrip menuStrip1;
-        private FontAwesome.Sharp.IconMenuItem iconMenuItem2;
+        private FontAwesome.Sharp.IconMenuItem MenuUsuarios;
         private MenuStrip menuStrip2;
         private ToolStripMenuItem sistemaDeGestionDeGastosToolStripMenuItem1;
-        private FontAwesome.Sharp.IconMenuItem iconMenuItem3;
-        private FontAwesome.Sharp.IconMenuItem iconMenuItem4;
-        private Panel panel1;
+        private FontAwesome.Sharp.IconMenuItem MenuVerGastos;
+        private FontAwesome.Sharp.IconMenuItem MenuCategorias;
+        private Panel Contenedor;
     }
 }

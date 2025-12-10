@@ -1,6 +1,6 @@
 ﻿namespace ProyectoPrograII
 {
-    partial class frmCategorias
+    partial class frmUsuarios
     {
         /// <summary>
         /// Required designer variable.
@@ -28,49 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            iconButton4 = new FontAwesome.Sharp.IconButton();
             DataGriedUsuarios = new DataGridView();
             Editar = new DataGridViewButtonColumn();
             Eliminar = new DataGridViewButtonColumn();
+            label1 = new Label();
+            iconButton4 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)DataGriedUsuarios).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.BackColor = SystemColors.GradientInactiveCaption;
-            label1.Dock = DockStyle.Top;
-            label1.Location = new Point(0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(984, 76);
-            label1.TabIndex = 6;
-            // 
-            // label2
-            // 
-            label2.BackColor = SystemColors.GradientInactiveCaption;
-            label2.Font = new Font("Segoe UI", 25F);
-            label2.Location = new Point(31, 22);
-            label2.Name = "label2";
-            label2.Size = new Size(218, 54);
-            label2.TabIndex = 7;
-            label2.Text = "Categorias";
-            // 
-            // iconButton4
-            // 
-            iconButton4.Font = new Font("Segoe UI", 12F);
-            iconButton4.IconChar = FontAwesome.Sharp.IconChar.Add;
-            iconButton4.IconColor = Color.Black;
-            iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton4.IconSize = 25;
-            iconButton4.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton4.Location = new Point(795, 62);
-            iconButton4.Name = "iconButton4";
-            iconButton4.Size = new Size(100, 32);
-            iconButton4.TabIndex = 26;
-            iconButton4.Text = "Agregar";
-            iconButton4.TextAlign = ContentAlignment.MiddleRight;
-            iconButton4.UseVisualStyleBackColor = true;
             // 
             // DataGriedUsuarios
             // 
@@ -80,12 +44,12 @@
             DataGriedUsuarios.BackgroundColor = Color.White;
             DataGriedUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DataGriedUsuarios.Columns.AddRange(new DataGridViewColumn[] { Editar, Eliminar });
-            DataGriedUsuarios.Location = new Point(134, 109);
+            DataGriedUsuarios.Location = new Point(78, 118);
             DataGriedUsuarios.Name = "DataGriedUsuarios";
             DataGriedUsuarios.RightToLeft = RightToLeft.Yes;
             DataGriedUsuarios.RowHeadersWidth = 51;
             DataGriedUsuarios.Size = new Size(761, 270);
-            DataGriedUsuarios.TabIndex = 27;
+            DataGriedUsuarios.TabIndex = 13;
             // 
             // Editar
             // 
@@ -103,32 +67,52 @@
             Eliminar.Name = "Eliminar";
             Eliminar.Width = 35;
             // 
-            // frmCategorias
+            // label1
+            // 
+            label1.Font = new Font("Segoe UI", 25F);
+            label1.Location = new Point(43, 23);
+            label1.Name = "label1";
+            label1.Size = new Size(186, 48);
+            label1.TabIndex = 14;
+            label1.Text = "Usuarios";
+            // 
+            // iconButton4
+            // 
+            iconButton4.Font = new Font("Segoe UI", 12F);
+            iconButton4.IconChar = FontAwesome.Sharp.IconChar.Add;
+            iconButton4.IconColor = Color.Black;
+            iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton4.IconSize = 25;
+            iconButton4.ImageAlign = ContentAlignment.MiddleLeft;
+            iconButton4.Location = new Point(771, 53);
+            iconButton4.Name = "iconButton4";
+            iconButton4.Size = new Size(100, 32);
+            iconButton4.TabIndex = 25;
+            iconButton4.Text = "Agregar";
+            iconButton4.TextAlign = ContentAlignment.MiddleRight;
+            iconButton4.UseVisualStyleBackColor = true;
+            iconButton4.Click += iconButton4_Click;
+            // 
+            // frmUsuarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
-            ClientSize = new Size(984, 433);
-            Controls.Add(DataGriedUsuarios);
+            ClientSize = new Size(947, 460);
             Controls.Add(iconButton4);
-            Controls.Add(label2);
             Controls.Add(label1);
-            FormBorderStyle = FormBorderStyle.FixedDialog;
-            Margin = new Padding(4, 3, 4, 3);
-            MaximizeBox = false;
-            Name = "frmCategorias";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "frmCategorias";
+            Controls.Add(DataGriedUsuarios);
+            Name = "frmUsuarios";
+            Text = "Usuarios";
+            Load += frmUsuarios_Load;
             ((System.ComponentModel.ISupportInitialize)DataGriedUsuarios).EndInit();
             ResumeLayout(false);
-
         }
 
         #endregion
-        private Label label1;
-        private Label label2;
-        private FontAwesome.Sharp.IconButton iconButton4;
         private DataGridView DataGriedUsuarios;
+        private Label label1;
+        private FontAwesome.Sharp.IconButton iconButton4;
         private DataGridViewButtonColumn Editar;
         private DataGridViewButtonColumn Eliminar;
     }
