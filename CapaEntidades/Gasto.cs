@@ -9,17 +9,17 @@ namespace CapaEntidades
 {
     public class Gasto
     {
-        public int IdGasto { get; set; }
-        public string Descripcion { get; set; }
         public decimal Monto { get; set; }
+        public string Categoria { get; set; }
+        public string Usuario { get; set; }
 
         public static BindingList<Gasto> ListaGastos { get; } = new BindingList<Gasto>();
 
-        public Gasto(int idGasto, string descripcion, decimal monto)
+        public Gasto(decimal Monto, string Usuario, string Categoria)
         {
-            this.IdGasto = idGasto;
-            this.Descripcion = descripcion;
-            this.Monto = monto;
+            this.Monto = Monto;
+            this.Usuario = Usuario;
+            this.Categoria = Categoria;
             ListaGastos.Add(this);
         }
     }

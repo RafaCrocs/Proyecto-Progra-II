@@ -30,13 +30,18 @@ namespace ProyectoPrograII
 
         public void btnGuardar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                nuevoUsuario = new Usuario(int.Parse(txtId.Text), txtNombre.Text, txtApellido.Text);
 
-            nuevoUsuario = new Usuario(int.Parse(txtId.Text), txtNombre.Text, txtApellido.Text);
 
+                MessageBox.Show("Usuario agregado exitosamente");
 
-            MessageBox.Show("Usuario agregado exitosamente");
-
-            this.Close();
+                this.Close();
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Error al agregar algun dato: " + ex.Message);
+            }
 
         }
 

@@ -45,10 +45,10 @@
             dateTimePicker3 = new DateTimePicker();
             label7 = new Label();
             iconButton4 = new FontAwesome.Sharp.IconButton();
-            DataGriedUsuarios = new DataGridView();
+            DataGriedGastos = new DataGridView();
             dataGridViewButtonColumn1 = new DataGridViewButtonColumn();
             Eliminar = new DataGridViewButtonColumn();
-            ((System.ComponentModel.ISupportInitialize)DataGriedUsuarios).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DataGriedGastos).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -66,7 +66,7 @@
             // 
             label2.BackColor = SystemColors.GradientActiveCaption;
             label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(15, 158);
+            label2.Location = new Point(15, 121);
             label2.Name = "label2";
             label2.Size = new Size(245, 23);
             label2.TabIndex = 1;
@@ -75,7 +75,7 @@
             // label3
             // 
             label3.Font = new Font("Segoe UI", 15F);
-            label3.Location = new Point(444, 443);
+            label3.Location = new Point(286, 439);
             label3.Name = "label3";
             label3.Size = new Size(356, 34);
             label3.TabIndex = 2;
@@ -84,7 +84,7 @@
             // label4
             // 
             label4.Font = new Font("Microsoft Sans Serif", 12F);
-            label4.Location = new Point(244, 260);
+            label4.Location = new Point(51, 343);
             label4.Name = "label4";
             label4.Size = new Size(26, 20);
             label4.TabIndex = 3;
@@ -104,7 +104,7 @@
             // 
             label6.BackColor = SystemColors.GradientActiveCaption;
             label6.Font = new Font("Segoe UI", 12F);
-            label6.Location = new Point(15, 257);
+            label6.Location = new Point(12, 288);
             label6.Name = "label6";
             label6.Size = new Size(109, 23);
             label6.TabIndex = 5;
@@ -113,7 +113,7 @@
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 12F);
-            textBox1.Location = new Point(795, 445);
+            textBox1.Location = new Point(637, 441);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 29);
             textBox1.TabIndex = 6;
@@ -122,7 +122,7 @@
             // textBox2
             // 
             textBox2.Font = new Font("Segoe UI", 12F);
-            textBox2.Location = new Point(216, 157);
+            textBox2.Location = new Point(15, 153);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(168, 29);
             textBox2.TabIndex = 7;
@@ -134,7 +134,7 @@
             iconButton1.IconColor = Color.Black;
             iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton1.IconSize = 15;
-            iconButton1.Location = new Point(388, 159);
+            iconButton1.Location = new Point(189, 155);
             iconButton1.Name = "iconButton1";
             iconButton1.Size = new Size(31, 23);
             iconButton1.TabIndex = 14;
@@ -147,7 +147,7 @@
             iconButton2.IconColor = Color.Black;
             iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton2.IconSize = 15;
-            iconButton2.Location = new Point(285, 211);
+            iconButton2.Location = new Point(142, 241);
             iconButton2.Name = "iconButton2";
             iconButton2.Size = new Size(31, 23);
             iconButton2.TabIndex = 15;
@@ -160,7 +160,7 @@
             iconButton3.IconColor = Color.Black;
             iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton3.IconSize = 15;
-            iconButton3.Location = new Point(390, 261);
+            iconButton3.Location = new Point(142, 343);
             iconButton3.Name = "iconButton3";
             iconButton3.Size = new Size(31, 23);
             iconButton3.TabIndex = 16;
@@ -170,7 +170,7 @@
             // 
             comboBox4.Font = new Font("Segoe UI", 12F);
             comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(664, 445);
+            comboBox4.Location = new Point(506, 441);
             comboBox4.Name = "comboBox4";
             comboBox4.Size = new Size(104, 29);
             comboBox4.TabIndex = 17;
@@ -180,7 +180,7 @@
             // 
             dateTimePicker1.Font = new Font("Microsoft Sans Serif", 12F);
             dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(129, 257);
+            dateTimePicker1.Location = new Point(12, 314);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(111, 26);
             dateTimePicker1.TabIndex = 18;
@@ -189,7 +189,7 @@
             // 
             dateTimePicker2.Font = new Font("Microsoft Sans Serif", 12F);
             dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(276, 258);
+            dateTimePicker2.Location = new Point(12, 366);
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(108, 26);
             dateTimePicker2.TabIndex = 19;
@@ -198,7 +198,7 @@
             // 
             dateTimePicker3.Font = new Font("Microsoft Sans Serif", 12F);
             dateTimePicker3.Format = DateTimePickerFormat.Short;
-            dateTimePicker3.Location = new Point(158, 209);
+            dateTimePicker3.Location = new Point(15, 237);
             dateTimePicker3.Name = "dateTimePicker3";
             dateTimePicker3.Size = new Size(121, 26);
             dateTimePicker3.TabIndex = 20;
@@ -209,7 +209,7 @@
             label7.Dock = DockStyle.Left;
             label7.Location = new Point(0, 0);
             label7.Name = "label7";
-            label7.Size = new Size(438, 497);
+            label7.Size = new Size(260, 497);
             label7.TabIndex = 23;
             // 
             // iconButton4
@@ -220,28 +220,29 @@
             iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton4.IconSize = 25;
             iconButton4.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton4.Location = new Point(1059, 27);
+            iconButton4.Location = new Point(829, 66);
             iconButton4.Name = "iconButton4";
             iconButton4.Size = new Size(100, 32);
             iconButton4.TabIndex = 24;
             iconButton4.Text = "Agregar";
             iconButton4.TextAlign = ContentAlignment.MiddleRight;
             iconButton4.UseVisualStyleBackColor = true;
+            iconButton4.Click += iconButton4_Click;
             // 
-            // DataGriedUsuarios
+            // DataGriedGastos
             // 
-            DataGriedUsuarios.AllowDrop = true;
-            DataGriedUsuarios.AllowUserToOrderColumns = true;
-            DataGriedUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            DataGriedUsuarios.BackgroundColor = Color.White;
-            DataGriedUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataGriedUsuarios.Columns.AddRange(new DataGridViewColumn[] { dataGridViewButtonColumn1, Eliminar });
-            DataGriedUsuarios.Location = new Point(519, 95);
-            DataGriedUsuarios.Name = "DataGriedUsuarios";
-            DataGriedUsuarios.RightToLeft = RightToLeft.Yes;
-            DataGriedUsuarios.RowHeadersWidth = 51;
-            DataGriedUsuarios.Size = new Size(640, 317);
-            DataGriedUsuarios.TabIndex = 28;
+            DataGriedGastos.AllowDrop = true;
+            DataGriedGastos.AllowUserToOrderColumns = true;
+            DataGriedGastos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DataGriedGastos.BackgroundColor = Color.White;
+            DataGriedGastos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DataGriedGastos.Columns.AddRange(new DataGridViewColumn[] { dataGridViewButtonColumn1, Eliminar });
+            DataGriedGastos.Location = new Point(289, 104);
+            DataGriedGastos.Name = "DataGriedGastos";
+            DataGriedGastos.RightToLeft = RightToLeft.Yes;
+            DataGriedGastos.RowHeadersWidth = 51;
+            DataGriedGastos.Size = new Size(640, 317);
+            DataGriedGastos.TabIndex = 28;
             // 
             // dataGridViewButtonColumn1
             // 
@@ -265,7 +266,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(1209, 497);
-            Controls.Add(DataGriedUsuarios);
+            Controls.Add(DataGriedGastos);
             Controls.Add(iconButton4);
             Controls.Add(dateTimePicker3);
             Controls.Add(dateTimePicker2);
@@ -285,7 +286,8 @@
             Controls.Add(label7);
             Name = "frmVerGastos";
             Text = "Ver_Gastos";
-            ((System.ComponentModel.ISupportInitialize)DataGriedUsuarios).EndInit();
+            Load += frmVerGastos_Load;
+            ((System.ComponentModel.ISupportInitialize)DataGriedGastos).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -309,7 +311,7 @@
         private DateTimePicker dateTimePicker3;
         private Label label7;
         private FontAwesome.Sharp.IconButton iconButton4;
-        private DataGridView DataGriedUsuarios;
+        private DataGridView DataGriedGastos;
         private DataGridViewButtonColumn dataGridViewButtonColumn1;
         private DataGridViewButtonColumn Eliminar;
     }

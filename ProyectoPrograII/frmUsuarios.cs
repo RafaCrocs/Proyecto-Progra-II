@@ -30,7 +30,28 @@ namespace ProyectoPrograII
             agregarUsuario.Show();
         }
 
+        private void DataGriedUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Usar botones editar y eliminar
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = DataGriedUsuarios.Rows[e.RowIndex];
+
+                if (DataGriedUsuarios.Columns[e.ColumnIndex].Name == "Editar")
+                {
+                    //Ver que columna se esta seleccionando
 
 
+                    //frmModificarUsuario frmModificarUsuario = new frmModificarUsuario();
+                    //frmModificarUsuario.Show();
+
+                }
+                else if (DataGriedUsuarios.Columns[e.ColumnIndex].Name == "Eliminar")
+                {
+
+                }
+
+            }
+        }
     }
 }

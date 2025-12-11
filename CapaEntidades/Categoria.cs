@@ -15,9 +15,8 @@ namespace CapaEntidades
 
         public static BindingList<Categoria> ListaCategorias { get; } = new BindingList<Categoria>();
 
-        public Categoria(int idCategoria, string nombre, string descripcion)
+        public Categoria(string nombre, string descripcion)
         {
-            this.IdCategoria = idCategoria;
             this.Nombre = nombre;
             this.Descripcion = descripcion;
             ListaCategorias.Add(this);

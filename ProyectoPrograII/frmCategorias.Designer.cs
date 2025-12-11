@@ -28,27 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             label2 = new Label();
             iconButton4 = new FontAwesome.Sharp.IconButton();
-            DataGriedUsuarios = new DataGridView();
+            DataGriedCategorias = new DataGridView();
             Editar = new DataGridViewButtonColumn();
             Eliminar = new DataGridViewButtonColumn();
-            ((System.ComponentModel.ISupportInitialize)DataGriedUsuarios).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DataGriedCategorias).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.BackColor = SystemColors.GradientInactiveCaption;
-            label1.Dock = DockStyle.Top;
-            label1.Location = new Point(0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(984, 76);
-            label1.TabIndex = 6;
             // 
             // label2
             // 
-            label2.BackColor = SystemColors.GradientInactiveCaption;
+            label2.BackColor = Color.White;
             label2.Font = new Font("Segoe UI", 25F);
             label2.Location = new Point(31, 22);
             label2.Name = "label2";
@@ -64,28 +54,29 @@
             iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton4.IconSize = 25;
             iconButton4.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton4.Location = new Point(795, 62);
+            iconButton4.Location = new Point(795, 100);
             iconButton4.Name = "iconButton4";
             iconButton4.Size = new Size(100, 32);
             iconButton4.TabIndex = 26;
             iconButton4.Text = "Agregar";
             iconButton4.TextAlign = ContentAlignment.MiddleRight;
             iconButton4.UseVisualStyleBackColor = true;
+            iconButton4.Click += iconButton4_Click;
             // 
-            // DataGriedUsuarios
+            // DataGriedCategorias
             // 
-            DataGriedUsuarios.AllowDrop = true;
-            DataGriedUsuarios.AllowUserToOrderColumns = true;
-            DataGriedUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            DataGriedUsuarios.BackgroundColor = Color.White;
-            DataGriedUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataGriedUsuarios.Columns.AddRange(new DataGridViewColumn[] { Editar, Eliminar });
-            DataGriedUsuarios.Location = new Point(134, 109);
-            DataGriedUsuarios.Name = "DataGriedUsuarios";
-            DataGriedUsuarios.RightToLeft = RightToLeft.Yes;
-            DataGriedUsuarios.RowHeadersWidth = 51;
-            DataGriedUsuarios.Size = new Size(761, 270);
-            DataGriedUsuarios.TabIndex = 27;
+            DataGriedCategorias.AllowDrop = true;
+            DataGriedCategorias.AllowUserToOrderColumns = true;
+            DataGriedCategorias.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DataGriedCategorias.BackgroundColor = Color.White;
+            DataGriedCategorias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DataGriedCategorias.Columns.AddRange(new DataGridViewColumn[] { Editar, Eliminar });
+            DataGriedCategorias.Location = new Point(134, 138);
+            DataGriedCategorias.Name = "DataGriedCategorias";
+            DataGriedCategorias.RightToLeft = RightToLeft.Yes;
+            DataGriedCategorias.RowHeadersWidth = 51;
+            DataGriedCategorias.Size = new Size(761, 270);
+            DataGriedCategorias.TabIndex = 27;
             // 
             // Editar
             // 
@@ -107,28 +98,27 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.GradientInactiveCaption;
-            ClientSize = new Size(984, 433);
-            Controls.Add(DataGriedUsuarios);
+            BackColor = Color.White;
+            ClientSize = new Size(979, 542);
+            Controls.Add(DataGriedCategorias);
             Controls.Add(iconButton4);
             Controls.Add(label2);
-            Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Margin = new Padding(4, 3, 4, 3);
             MaximizeBox = false;
             Name = "frmCategorias";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmCategorias";
-            ((System.ComponentModel.ISupportInitialize)DataGriedUsuarios).EndInit();
+            Load += frmCategorias_Load;
+            ((System.ComponentModel.ISupportInitialize)DataGriedCategorias).EndInit();
             ResumeLayout(false);
 
         }
 
         #endregion
-        private Label label1;
         private Label label2;
         private FontAwesome.Sharp.IconButton iconButton4;
-        private DataGridView DataGriedUsuarios;
+        private DataGridView DataGriedCategorias;
         private DataGridViewButtonColumn Editar;
         private DataGridViewButtonColumn Eliminar;
     }

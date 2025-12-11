@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             DataGriedUsuarios = new DataGridView();
-            Editar = new DataGridViewButtonColumn();
             Eliminar = new DataGridViewButtonColumn();
+            Editar = new DataGridViewButtonColumn();
             label1 = new Label();
             iconButton4 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)DataGriedUsuarios).BeginInit();
@@ -43,21 +43,14 @@
             DataGriedUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DataGriedUsuarios.BackgroundColor = Color.White;
             DataGriedUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataGriedUsuarios.Columns.AddRange(new DataGridViewColumn[] { Editar, Eliminar });
-            DataGriedUsuarios.Location = new Point(78, 118);
+            DataGriedUsuarios.Columns.AddRange(new DataGridViewColumn[] { Eliminar, Editar });
+            DataGriedUsuarios.Location = new Point(78, 147);
             DataGriedUsuarios.Name = "DataGriedUsuarios";
             DataGriedUsuarios.RightToLeft = RightToLeft.Yes;
             DataGriedUsuarios.RowHeadersWidth = 51;
             DataGriedUsuarios.Size = new Size(761, 270);
             DataGriedUsuarios.TabIndex = 13;
-            // 
-            // Editar
-            // 
-            Editar.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            Editar.FillWeight = 164.467041F;
-            Editar.HeaderText = "";
-            Editar.Name = "Editar";
-            Editar.Width = 35;
+            DataGriedUsuarios.CellContentClick += DataGriedUsuarios_CellContentClick;
             // 
             // Eliminar
             // 
@@ -66,6 +59,14 @@
             Eliminar.HeaderText = "";
             Eliminar.Name = "Eliminar";
             Eliminar.Width = 35;
+            // 
+            // Editar
+            // 
+            Editar.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            Editar.FillWeight = 164.467041F;
+            Editar.HeaderText = "";
+            Editar.Name = "Editar";
+            Editar.Width = 35;
             // 
             // label1
             // 
@@ -84,7 +85,7 @@
             iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton4.IconSize = 25;
             iconButton4.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton4.Location = new Point(771, 53);
+            iconButton4.Location = new Point(739, 109);
             iconButton4.Name = "iconButton4";
             iconButton4.Size = new Size(100, 32);
             iconButton4.TabIndex = 25;
@@ -97,7 +98,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.GradientInactiveCaption;
+            BackColor = Color.White;
             ClientSize = new Size(947, 460);
             Controls.Add(iconButton4);
             Controls.Add(label1);
@@ -113,7 +114,7 @@
         private DataGridView DataGriedUsuarios;
         private Label label1;
         private FontAwesome.Sharp.IconButton iconButton4;
-        private DataGridViewButtonColumn Editar;
         private DataGridViewButtonColumn Eliminar;
+        private DataGridViewButtonColumn Editar;
     }
 }

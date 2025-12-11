@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaEntidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,22 @@ namespace ProyectoPrograII
 {
     public partial class AgregarCategoria : Form
     {
+        Categoria nuevaCategoria;
         public AgregarCategoria()
         {
             InitializeComponent();
+        }
+
+        private void AgregarCategoria_Load(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            nuevaCategoria = new Categoria(txtNombre.Text, txtDescripcion.Text);
+            this.Close();
         }
     }
 }
