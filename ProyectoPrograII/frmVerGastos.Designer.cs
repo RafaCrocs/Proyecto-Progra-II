@@ -34,19 +34,20 @@
             label5 = new Label();
             label6 = new Label();
             txtSuma = new TextBox();
-            textBox2 = new TextBox();
+            txtDescripcion = new TextBox();
             iconButton1 = new FontAwesome.Sharp.IconButton();
             iconButton2 = new FontAwesome.Sharp.IconButton();
             iconButton3 = new FontAwesome.Sharp.IconButton();
-            dateTimePicker1 = new DateTimePicker();
-            dateTimePicker2 = new DateTimePicker();
-            dateTimePicker3 = new DateTimePicker();
+            Fecha1 = new DateTimePicker();
+            Fecha2 = new DateTimePicker();
+            dtpFecha = new DateTimePicker();
             label7 = new Label();
             btnAgregarGasto = new FontAwesome.Sharp.IconButton();
             DataGriedGastos = new DataGridView();
             dataGridViewButtonColumn1 = new DataGridViewButtonColumn();
             Eliminar = new DataGridViewButtonColumn();
             label3 = new Label();
+            btnLimpiar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)DataGriedGastos).BeginInit();
             SuspendLayout();
             // 
@@ -109,13 +110,13 @@
             txtSuma.TabIndex = 6;
             txtSuma.Text = "0";
             // 
-            // textBox2
+            // txtDescripcion
             // 
-            textBox2.Font = new Font("Segoe UI", 12F);
-            textBox2.Location = new Point(15, 153);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(168, 29);
-            textBox2.TabIndex = 7;
+            txtDescripcion.Font = new Font("Segoe UI", 12F);
+            txtDescripcion.Location = new Point(15, 153);
+            txtDescripcion.Name = "txtDescripcion";
+            txtDescripcion.Size = new Size(168, 29);
+            txtDescripcion.TabIndex = 7;
             // 
             // iconButton1
             // 
@@ -129,6 +130,7 @@
             iconButton1.Size = new Size(31, 23);
             iconButton1.TabIndex = 14;
             iconButton1.UseVisualStyleBackColor = true;
+            iconButton1.Click += iconButton1_Click;
             // 
             // iconButton2
             // 
@@ -142,6 +144,7 @@
             iconButton2.Size = new Size(31, 23);
             iconButton2.TabIndex = 15;
             iconButton2.UseVisualStyleBackColor = true;
+            iconButton2.Click += iconButton2_Click;
             // 
             // iconButton3
             // 
@@ -155,33 +158,34 @@
             iconButton3.Size = new Size(31, 23);
             iconButton3.TabIndex = 16;
             iconButton3.UseVisualStyleBackColor = true;
+            iconButton3.Click += iconButton3_Click;
             // 
-            // dateTimePicker1
+            // Fecha1
             // 
-            dateTimePicker1.Font = new Font("Microsoft Sans Serif", 12F);
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(12, 314);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(111, 26);
-            dateTimePicker1.TabIndex = 18;
+            Fecha1.Font = new Font("Microsoft Sans Serif", 12F);
+            Fecha1.Format = DateTimePickerFormat.Short;
+            Fecha1.Location = new Point(12, 314);
+            Fecha1.Name = "Fecha1";
+            Fecha1.Size = new Size(111, 26);
+            Fecha1.TabIndex = 18;
             // 
-            // dateTimePicker2
+            // Fecha2
             // 
-            dateTimePicker2.Font = new Font("Microsoft Sans Serif", 12F);
-            dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(12, 366);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(108, 26);
-            dateTimePicker2.TabIndex = 19;
+            Fecha2.Font = new Font("Microsoft Sans Serif", 12F);
+            Fecha2.Format = DateTimePickerFormat.Short;
+            Fecha2.Location = new Point(12, 366);
+            Fecha2.Name = "Fecha2";
+            Fecha2.Size = new Size(108, 26);
+            Fecha2.TabIndex = 19;
             // 
-            // dateTimePicker3
+            // dtpFecha
             // 
-            dateTimePicker3.Font = new Font("Microsoft Sans Serif", 12F);
-            dateTimePicker3.Format = DateTimePickerFormat.Short;
-            dateTimePicker3.Location = new Point(15, 237);
-            dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(121, 26);
-            dateTimePicker3.TabIndex = 20;
+            dtpFecha.Font = new Font("Microsoft Sans Serif", 12F);
+            dtpFecha.Format = DateTimePickerFormat.Short;
+            dtpFecha.Location = new Point(15, 237);
+            dtpFecha.Name = "dtpFecha";
+            dtpFecha.Size = new Size(121, 26);
+            dtpFecha.TabIndex = 20;
             // 
             // label7
             // 
@@ -191,6 +195,7 @@
             label7.Name = "label7";
             label7.Size = new Size(260, 497);
             label7.TabIndex = 23;
+            label7.Text = "Limpiar Busquedas";
             // 
             // btnAgregarGasto
             // 
@@ -251,22 +256,40 @@
             label3.TabIndex = 29;
             label3.Text = "Total de gastos:";
             // 
+            // btnLimpiar
+            // 
+            btnLimpiar.Font = new Font("Segoe UI", 12F);
+            btnLimpiar.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            btnLimpiar.IconColor = Color.Black;
+            btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnLimpiar.IconSize = 30;
+            btnLimpiar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnLimpiar.Location = new Point(32, 432);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new Size(177, 50);
+            btnLimpiar.TabIndex = 30;
+            btnLimpiar.Text = "Limpiar Busquedas";
+            btnLimpiar.TextAlign = ContentAlignment.MiddleRight;
+            btnLimpiar.UseVisualStyleBackColor = true;
+            btnLimpiar.Click += btnLimpiar_Click;
+            // 
             // frmVerGastos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1209, 497);
+            Controls.Add(btnLimpiar);
             Controls.Add(label3);
             Controls.Add(DataGriedGastos);
             Controls.Add(btnAgregarGasto);
-            Controls.Add(dateTimePicker3);
-            Controls.Add(dateTimePicker2);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(dtpFecha);
+            Controls.Add(Fecha2);
+            Controls.Add(Fecha1);
             Controls.Add(iconButton3);
             Controls.Add(iconButton2);
             Controls.Add(iconButton1);
-            Controls.Add(textBox2);
+            Controls.Add(txtDescripcion);
             Controls.Add(txtSuma);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -291,18 +314,19 @@
         private Label label5;
         private Label label6;
         private TextBox txtSuma;
-        private TextBox textBox2;
+        private TextBox txtDescripcion;
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton3;
         private ComboBox comboBox4;
-        private DateTimePicker dateTimePicker1;
-        private DateTimePicker dateTimePicker2;
-        private DateTimePicker dateTimePicker3;
+        private DateTimePicker Fecha1;
+        private DateTimePicker Fecha2;
+        private DateTimePicker dtpFecha;
         private Label label7;
         private FontAwesome.Sharp.IconButton btnAgregarGasto;
         private DataGridView DataGriedGastos;
         private DataGridViewButtonColumn dataGridViewButtonColumn1;
         private DataGridViewButtonColumn Eliminar;
+        private FontAwesome.Sharp.IconButton btnLimpiar;
     }
 }

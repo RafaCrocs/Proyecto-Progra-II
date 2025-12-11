@@ -34,7 +34,7 @@ namespace ProyectoPrograII
 
         private void MenuUsuarios_Click(object sender, EventArgs e)
         {
-            
+
             AbrirFormulario(new frmUsuarios());
         }
 
@@ -46,6 +46,16 @@ namespace ProyectoPrograII
         private void MenuCategorias_Click(object sender, EventArgs e)
         {
             AbrirFormulario(new frmCategorias());
+        }
+
+        private void frm_Inicio_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalir2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

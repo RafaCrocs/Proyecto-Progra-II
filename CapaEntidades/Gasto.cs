@@ -11,16 +11,18 @@ namespace CapaEntidades
     {
         public DateTime Fecha { get; set; }
         public decimal Monto { get; set; }
+        public string Descripcion { get; set; }
         public string Categoria { get; set; }
         public string Usuario { get; set; }
 
         public static BindingList<Gasto> ListaGastos { get; } = new BindingList<Gasto>();
 
-        public Gasto(decimal Monto, string Usuario, string Categoria, DateTimePicker Fecha)
+        public Gasto(decimal Monto, string Usuario, string Categoria,string Descripcion, DateTimePicker Fecha)
         {
             this.Monto = Monto;
             this.Usuario = Usuario;
             this.Categoria = Categoria;
+            this.Descripcion = Descripcion;
             this.Fecha = Fecha.Value;
             ListaGastos.Add(this);
         }

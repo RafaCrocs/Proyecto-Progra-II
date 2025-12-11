@@ -51,7 +51,7 @@ namespace ProyectoPrograII
         {
             try
             {
-                nuevoGasto = new Gasto(decimal.Parse(txtMonto.Text), cmbUsuarios.Text, cmbCategoria.Text, dtpFecha);
+                nuevoGasto = new Gasto(decimal.Parse(txtMonto.Text), cmbUsuarios.Text, cmbCategoria.Text, txtDescripcion.Text, dtpFecha);
                 MessageBox.Show("Gasto agregado exitosamente");
 
                 this.Close();

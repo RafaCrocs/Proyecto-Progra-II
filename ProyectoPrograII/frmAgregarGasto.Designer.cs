@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             grpDetalles = new GroupBox();
+            txtDescripcion = new TextBox();
+            label3 = new Label();
             cmbUsuarios = new ComboBox();
             dtpFecha = new DateTimePicker();
             cmbCategoria = new ComboBox();
@@ -46,6 +48,8 @@
             // 
             // grpDetalles
             // 
+            grpDetalles.Controls.Add(txtDescripcion);
+            grpDetalles.Controls.Add(label3);
             grpDetalles.Controls.Add(cmbUsuarios);
             grpDetalles.Controls.Add(dtpFecha);
             grpDetalles.Controls.Add(cmbCategoria);
@@ -64,11 +68,30 @@
             grpDetalles.TabStop = false;
             grpDetalles.Text = "Información del Gasto";
             // 
+            // txtDescripcion
+            // 
+            txtDescripcion.Location = new Point(128, 79);
+            txtDescripcion.Margin = new Padding(4, 3, 4, 3);
+            txtDescripcion.Name = "txtDescripcion";
+            txtDescripcion.Size = new Size(256, 26);
+            txtDescripcion.TabIndex = 6;
+            txtDescripcion.TextAlign = HorizontalAlignment.Right;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(23, 79);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(96, 20);
+            label3.TabIndex = 5;
+            label3.Text = "Descripcion:";
+            // 
             // cmbUsuarios
             // 
             cmbUsuarios.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbUsuarios.FormattingEnabled = true;
-            cmbUsuarios.Location = new Point(128, 169);
+            cmbUsuarios.Location = new Point(128, 207);
             cmbUsuarios.Margin = new Padding(4, 3, 4, 3);
             cmbUsuarios.Name = "cmbUsuarios";
             cmbUsuarios.Size = new Size(256, 28);
@@ -79,7 +102,7 @@
             dtpFecha.CustomFormat = "";
             dtpFecha.Format = DateTimePickerFormat.Short;
             dtpFecha.ImeMode = ImeMode.NoControl;
-            dtpFecha.Location = new Point(128, 127);
+            dtpFecha.Location = new Point(128, 165);
             dtpFecha.Margin = new Padding(4, 3, 4, 3);
             dtpFecha.Name = "dtpFecha";
             dtpFecha.Size = new Size(256, 26);
@@ -90,7 +113,7 @@
             // 
             cmbCategoria.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbCategoria.FormattingEnabled = true;
-            cmbCategoria.Location = new Point(128, 81);
+            cmbCategoria.Location = new Point(128, 119);
             cmbCategoria.Margin = new Padding(4, 3, 4, 3);
             cmbCategoria.Name = "cmbCategoria";
             cmbCategoria.Size = new Size(256, 28);
@@ -108,7 +131,7 @@
             // lblFecha
             // 
             lblFecha.AutoSize = true;
-            lblFecha.Location = new Point(23, 130);
+            lblFecha.Location = new Point(23, 168);
             lblFecha.Margin = new Padding(4, 0, 4, 0);
             lblFecha.Name = "lblFecha";
             lblFecha.Size = new Size(58, 20);
@@ -118,7 +141,7 @@
             // lblCategoria
             // 
             lblCategoria.AutoSize = true;
-            lblCategoria.Location = new Point(23, 84);
+            lblCategoria.Location = new Point(23, 122);
             lblCategoria.Margin = new Padding(4, 0, 4, 0);
             lblCategoria.Name = "lblCategoria";
             lblCategoria.Size = new Size(82, 20);
@@ -128,7 +151,7 @@
             // lblDescripcion
             // 
             lblDescripcion.AutoSize = true;
-            lblDescripcion.Location = new Point(23, 177);
+            lblDescripcion.Location = new Point(23, 215);
             lblDescripcion.Margin = new Padding(4, 0, 4, 0);
             lblDescripcion.Name = "lblDescripcion";
             lblDescripcion.Size = new Size(68, 20);
@@ -225,5 +248,7 @@
         private Label label2;
         public ComboBox cmbUsuarios;
         public ComboBox cmbCategoria;
+        public TextBox txtDescripcion;
+        private Label label3;
     }
 }

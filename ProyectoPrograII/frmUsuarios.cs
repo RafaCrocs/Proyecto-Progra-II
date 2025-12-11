@@ -48,6 +48,15 @@ namespace ProyectoPrograII
                 }
                 else if (DataGriedUsuarios.Columns[e.ColumnIndex].Name == "Eliminar")
                 {
+                    //Eliminar usuario
+                    string nombreUsuario = row.Cells["Nombre"].Value.ToString();
+                    Usuario usuarioAEliminar = Usuario.ListaUsuarios.FirstOrDefault(u => u.Nombre == nombreUsuario);
+                    if (usuarioAEliminar != null)
+                    {
+                        Usuario.ListaUsuarios.Remove(usuarioAEliminar);
+                        DataGriedUsuarios.DataSource = null;
+                        DataGriedUsuarios.DataSource = Usuario.ListaUsuarios;
+                    }
 
                 }
 

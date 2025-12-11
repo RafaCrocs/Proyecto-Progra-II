@@ -37,6 +37,7 @@
             menuStrip2 = new MenuStrip();
             sistemaDeGestionDeGastosToolStripMenuItem1 = new ToolStripMenuItem();
             Contenedor = new Panel();
+            btnSalir = new FontAwesome.Sharp.IconButton();
             MenuUsuarios = new FontAwesome.Sharp.IconMenuItem();
             menuStrip1.SuspendLayout();
             menuStrip2.SuspendLayout();
@@ -78,7 +79,7 @@
             menuStrip1.AutoSize = false;
             menuStrip1.BackColor = SystemColors.GradientInactiveCaption;
             menuStrip1.Items.AddRange(new ToolStripItem[] { MenuUsuarios, MenuVerGastos, MenuCategorias });
-            menuStrip1.Location = new Point(0, 57);
+            menuStrip1.Location = new Point(0, 59);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1002, 50);
             menuStrip1.TabIndex = 9;
@@ -117,7 +118,8 @@
             menuStrip2.Items.AddRange(new ToolStripItem[] { sistemaDeGestionDeGastosToolStripMenuItem1 });
             menuStrip2.Location = new Point(0, 0);
             menuStrip2.Name = "menuStrip2";
-            menuStrip2.Size = new Size(1002, 57);
+            menuStrip2.RightToLeft = RightToLeft.No;
+            menuStrip2.Size = new Size(1002, 59);
             menuStrip2.TabIndex = 10;
             menuStrip2.Text = "menuStrip2";
             // 
@@ -125,17 +127,27 @@
             // 
             sistemaDeGestionDeGastosToolStripMenuItem1.Font = new Font("Segoe UI", 20F);
             sistemaDeGestionDeGastosToolStripMenuItem1.Name = "sistemaDeGestionDeGastosToolStripMenuItem1";
-            sistemaDeGestionDeGastosToolStripMenuItem1.Size = new Size(380, 53);
+            sistemaDeGestionDeGastosToolStripMenuItem1.Size = new Size(380, 55);
             sistemaDeGestionDeGastosToolStripMenuItem1.Text = "Sistema de Gestion de Gastos";
             // 
             // Contenedor
             // 
             Contenedor.Controls.Add(dateTimePicker1);
             Contenedor.Dock = DockStyle.Fill;
-            Contenedor.Location = new Point(0, 107);
+            Contenedor.Location = new Point(0, 109);
             Contenedor.Name = "Contenedor";
-            Contenedor.Size = new Size(1002, 401);
+            Contenedor.Size = new Size(1002, 399);
             Contenedor.TabIndex = 11;
+            // 
+            // btnSalir
+            // 
+            btnSalir.IconChar = FontAwesome.Sharp.IconChar.None;
+            btnSalir.IconColor = Color.Black;
+            btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnSalir.Location = new Point(0, 0);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(75, 23);
+            btnSalir.TabIndex = 0;
             // 
             // frm_Inicio
             // 
@@ -149,6 +161,7 @@
             MainMenuStrip = menuStrip1;
             Name = "frm_Inicio";
             Text = "frm_Inicio";
+            Load += frm_Inicio_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             menuStrip2.ResumeLayout(false);
@@ -167,5 +180,6 @@
         private FontAwesome.Sharp.IconMenuItem MenuVerGastos;
         private FontAwesome.Sharp.IconMenuItem MenuCategorias;
         private Panel Contenedor;
+        private FontAwesome.Sharp.IconButton btnSalir;
     }
 }
