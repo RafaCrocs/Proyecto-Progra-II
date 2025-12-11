@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaEntidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,20 +16,10 @@ namespace ProyectoPrograII
         public frmVerGastos()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
 
         }
 
-        private void dataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-
-
-        }
-
-        private void iconButton4_Click(object sender, EventArgs e)
+        private void btnAgregarGasto_Click(object sender, EventArgs e)
         {
             frmAgregarGasto agregarGasto = new frmAgregarGasto();
             agregarGasto.ShowDialog();
@@ -36,7 +27,19 @@ namespace ProyectoPrograII
 
         private void frmVerGastos_Load(object sender, EventArgs e)
         {
-            DataGriedGastos.DataSource = CapaEntidades.Gasto.ListaGastos;
+            DataGriedGastos.DataSource = Gasto.ListaGastos;
+
+        }
+
+
+        private void DataGriedGastos_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            decimal Suma = 0;
+            for (int i = 0; i < DataGriedGastos.Rows.Count; i++)
+            {
+                Suma += Convert.ToDecimal(DataGriedGastos.Rows[i].Cells["Monto"].Value);
+            }
+            txtSuma.Text = Suma.ToString();
 
         }
     }

@@ -18,6 +18,7 @@ namespace ProyectoPrograII
         public frmAgregarGasto()
         {
             InitializeComponent();
+
         }
 
         private void frmAgregarGasto_Load(object sender, EventArgs e)
@@ -51,12 +52,20 @@ namespace ProyectoPrograII
             try
             {
                 nuevoGasto = new Gasto(decimal.Parse(txtMonto.Text), cmbUsuarios.Text, cmbCategoria.Text, dtpFecha);
+                MessageBox.Show("Gasto agregado exitosamente");
+
+                this.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al agregar algun dato: " + ex.Message);
                 return;
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

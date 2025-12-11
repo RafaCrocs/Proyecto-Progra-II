@@ -30,5 +30,10 @@ namespace ProyectoPrograII
             nuevaCategoria = new Categoria(txtNombre.Text, txtDescripcion.Text);
             this.Close();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

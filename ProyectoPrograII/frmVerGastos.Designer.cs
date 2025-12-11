@@ -30,7 +30,6 @@
         {
             label1 = new Label();
             label2 = new Label();
-            label3 = new Label();
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
@@ -39,32 +38,31 @@
             iconButton1 = new FontAwesome.Sharp.IconButton();
             iconButton2 = new FontAwesome.Sharp.IconButton();
             iconButton3 = new FontAwesome.Sharp.IconButton();
-            comboBox4 = new ComboBox();
             dateTimePicker1 = new DateTimePicker();
             dateTimePicker2 = new DateTimePicker();
             dateTimePicker3 = new DateTimePicker();
             label7 = new Label();
-            iconButton4 = new FontAwesome.Sharp.IconButton();
+            btnAgregarGasto = new FontAwesome.Sharp.IconButton();
             DataGriedGastos = new DataGridView();
             dataGridViewButtonColumn1 = new DataGridViewButtonColumn();
             Eliminar = new DataGridViewButtonColumn();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)DataGriedGastos).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
-            label1.BackColor = SystemColors.GradientActiveCaption;
+            label1.BackColor = SystemColors.GradientInactiveCaption;
             label1.Font = new Font("Segoe UI", 25F);
             label1.Location = new Point(15, 43);
             label1.Name = "label1";
             label1.Size = new Size(131, 44);
             label1.TabIndex = 0;
             label1.Text = "Gastos";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
-            label2.BackColor = SystemColors.GradientActiveCaption;
+            label2.BackColor = SystemColors.GradientInactiveCaption;
             label2.Font = new Font("Segoe UI", 12F);
             label2.Location = new Point(15, 121);
             label2.Name = "label2";
@@ -72,17 +70,9 @@
             label2.TabIndex = 1;
             label2.Text = "Buscar Gasto por Detalle";
             // 
-            // label3
-            // 
-            label3.Font = new Font("Segoe UI", 15F);
-            label3.Location = new Point(286, 439);
-            label3.Name = "label3";
-            label3.Size = new Size(356, 34);
-            label3.TabIndex = 2;
-            label3.Text = "Total de gastos del mes:                        =";
-            // 
             // label4
             // 
+            label4.BackColor = SystemColors.GradientInactiveCaption;
             label4.Font = new Font("Microsoft Sans Serif", 12F);
             label4.Location = new Point(51, 343);
             label4.Name = "label4";
@@ -92,7 +82,7 @@
             // 
             // label5
             // 
-            label5.BackColor = SystemColors.GradientActiveCaption;
+            label5.BackColor = SystemColors.GradientInactiveCaption;
             label5.Font = new Font("Segoe UI", 12F);
             label5.Location = new Point(15, 209);
             label5.Name = "label5";
@@ -102,7 +92,7 @@
             // 
             // label6
             // 
-            label6.BackColor = SystemColors.GradientActiveCaption;
+            label6.BackColor = SystemColors.GradientInactiveCaption;
             label6.Font = new Font("Segoe UI", 12F);
             label6.Location = new Point(12, 288);
             label6.Name = "label6";
@@ -113,7 +103,7 @@
             // txtSuma
             // 
             txtSuma.Font = new Font("Segoe UI", 12F);
-            txtSuma.Location = new Point(637, 441);
+            txtSuma.Location = new Point(409, 444);
             txtSuma.Name = "txtSuma";
             txtSuma.Size = new Size(100, 29);
             txtSuma.TabIndex = 6;
@@ -166,16 +156,6 @@
             iconButton3.TabIndex = 16;
             iconButton3.UseVisualStyleBackColor = true;
             // 
-            // comboBox4
-            // 
-            comboBox4.Font = new Font("Segoe UI", 12F);
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(506, 441);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(104, 29);
-            comboBox4.TabIndex = 17;
-            comboBox4.Text = "Diciembre";
-            // 
             // dateTimePicker1
             // 
             dateTimePicker1.Font = new Font("Microsoft Sans Serif", 12F);
@@ -205,29 +185,29 @@
             // 
             // label7
             // 
-            label7.BackColor = SystemColors.GradientActiveCaption;
+            label7.BackColor = SystemColors.GradientInactiveCaption;
             label7.Dock = DockStyle.Left;
             label7.Location = new Point(0, 0);
             label7.Name = "label7";
             label7.Size = new Size(260, 497);
             label7.TabIndex = 23;
             // 
-            // iconButton4
+            // btnAgregarGasto
             // 
-            iconButton4.Font = new Font("Segoe UI", 12F);
-            iconButton4.IconChar = FontAwesome.Sharp.IconChar.Add;
-            iconButton4.IconColor = Color.Black;
-            iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton4.IconSize = 25;
-            iconButton4.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton4.Location = new Point(829, 66);
-            iconButton4.Name = "iconButton4";
-            iconButton4.Size = new Size(100, 32);
-            iconButton4.TabIndex = 24;
-            iconButton4.Text = "Agregar";
-            iconButton4.TextAlign = ContentAlignment.MiddleRight;
-            iconButton4.UseVisualStyleBackColor = true;
-            iconButton4.Click += iconButton4_Click;
+            btnAgregarGasto.Font = new Font("Segoe UI", 12F);
+            btnAgregarGasto.IconChar = FontAwesome.Sharp.IconChar.Add;
+            btnAgregarGasto.IconColor = Color.Black;
+            btnAgregarGasto.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnAgregarGasto.IconSize = 25;
+            btnAgregarGasto.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAgregarGasto.Location = new Point(829, 66);
+            btnAgregarGasto.Name = "btnAgregarGasto";
+            btnAgregarGasto.Size = new Size(100, 32);
+            btnAgregarGasto.TabIndex = 24;
+            btnAgregarGasto.Text = "Agregar";
+            btnAgregarGasto.TextAlign = ContentAlignment.MiddleRight;
+            btnAgregarGasto.UseVisualStyleBackColor = true;
+            btnAgregarGasto.Click += btnAgregarGasto_Click;
             // 
             // DataGriedGastos
             // 
@@ -243,6 +223,7 @@
             DataGriedGastos.RowHeadersWidth = 51;
             DataGriedGastos.Size = new Size(640, 317);
             DataGriedGastos.TabIndex = 28;
+            DataGriedGastos.RowsAdded += DataGriedGastos_RowsAdded;
             // 
             // dataGridViewButtonColumn1
             // 
@@ -260,18 +241,28 @@
             Eliminar.Name = "Eliminar";
             Eliminar.Width = 35;
             // 
+            // label3
+            // 
+            label3.BackColor = Color.White;
+            label3.Font = new Font("Segoe UI", 12F);
+            label3.Location = new Point(289, 447);
+            label3.Name = "label3";
+            label3.Size = new Size(123, 23);
+            label3.TabIndex = 29;
+            label3.Text = "Total de gastos:";
+            // 
             // frmVerGastos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.GradientInactiveCaption;
+            BackColor = Color.White;
             ClientSize = new Size(1209, 497);
+            Controls.Add(label3);
             Controls.Add(DataGriedGastos);
-            Controls.Add(iconButton4);
+            Controls.Add(btnAgregarGasto);
             Controls.Add(dateTimePicker3);
             Controls.Add(dateTimePicker2);
             Controls.Add(dateTimePicker1);
-            Controls.Add(comboBox4);
             Controls.Add(iconButton3);
             Controls.Add(iconButton2);
             Controls.Add(iconButton1);
@@ -280,7 +271,6 @@
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(label7);
@@ -310,7 +300,7 @@
         private DateTimePicker dateTimePicker2;
         private DateTimePicker dateTimePicker3;
         private Label label7;
-        private FontAwesome.Sharp.IconButton iconButton4;
+        private FontAwesome.Sharp.IconButton btnAgregarGasto;
         private DataGridView DataGriedGastos;
         private DataGridViewButtonColumn dataGridViewButtonColumn1;
         private DataGridViewButtonColumn Eliminar;
