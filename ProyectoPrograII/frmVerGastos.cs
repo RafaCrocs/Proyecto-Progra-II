@@ -37,6 +37,7 @@ namespace ProyectoPrograII
         private void frmVerGastos_Load(object sender, EventArgs e)
         {
             DataGriedGastos.DataSource = CapaEntidades.Gasto.ListaGastos;
+
         }
     }
 }

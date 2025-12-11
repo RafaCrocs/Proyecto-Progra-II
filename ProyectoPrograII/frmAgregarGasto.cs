@@ -50,7 +50,7 @@ namespace ProyectoPrograII
         {
             try
             {
-                nuevoGasto = new Gasto(decimal.Parse(txtMonto.Text), cmbUsuarios.Text, cmbCategoria.Text);
+                nuevoGasto = new Gasto(decimal.Parse(txtMonto.Text), cmbUsuarios.Text, cmbCategoria.Text, dtpFecha);
             }
             catch (Exception ex)
             {

@@ -34,7 +34,7 @@
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
-            textBox1 = new TextBox();
+            txtSuma = new TextBox();
             textBox2 = new TextBox();
             iconButton1 = new FontAwesome.Sharp.IconButton();
             iconButton2 = new FontAwesome.Sharp.IconButton();
@@ -110,14 +110,14 @@
             label6.TabIndex = 5;
             label6.Text = "Filtrar del dia: ";
             // 
-            // textBox1
+            // txtSuma
             // 
-            textBox1.Font = new Font("Segoe UI", 12F);
-            textBox1.Location = new Point(637, 441);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 29);
-            textBox1.TabIndex = 6;
-            textBox1.Text = "0";
+            txtSuma.Font = new Font("Segoe UI", 12F);
+            txtSuma.Location = new Point(637, 441);
+            txtSuma.Name = "txtSuma";
+            txtSuma.Size = new Size(100, 29);
+            txtSuma.TabIndex = 6;
+            txtSuma.Text = "0";
             // 
             // textBox2
             // 
@@ -174,7 +174,7 @@
             comboBox4.Name = "comboBox4";
             comboBox4.Size = new Size(104, 29);
             comboBox4.TabIndex = 17;
-            comboBox4.Text = "Noviembre";
+            comboBox4.Text = "Diciembre";
             // 
             // dateTimePicker1
             // 
@@ -276,7 +276,7 @@
             Controls.Add(iconButton2);
             Controls.Add(iconButton1);
             Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtSuma);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -300,7 +300,7 @@
         private Label label4;
         private Label label5;
         private Label label6;
-        private TextBox textBox1;
+        private TextBox txtSuma;
         private TextBox textBox2;
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconButton2;

@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             grpDetalles = new GroupBox();
+            cmbUsuarios = new ComboBox();
             dtpFecha = new DateTimePicker();
+            cmbCategoria = new ComboBox();
             txtMonto = new TextBox();
             lblFecha = new Label();
             lblCategoria = new Label();
@@ -39,8 +41,6 @@
             btnCancelar = new Button();
             label1 = new Label();
             label2 = new Label();
-            cmbCategoria = new ComboBox();
-            cmbUsuarios = new ComboBox();
             grpDetalles.SuspendLayout();
             SuspendLayout();
             // 
@@ -64,14 +64,37 @@
             grpDetalles.TabStop = false;
             grpDetalles.Text = "Información del Gasto";
             // 
+            // cmbUsuarios
+            // 
+            cmbUsuarios.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbUsuarios.FormattingEnabled = true;
+            cmbUsuarios.Location = new Point(128, 169);
+            cmbUsuarios.Margin = new Padding(4, 3, 4, 3);
+            cmbUsuarios.Name = "cmbUsuarios";
+            cmbUsuarios.Size = new Size(256, 28);
+            cmbUsuarios.TabIndex = 4;
+            // 
             // dtpFecha
             // 
+            dtpFecha.CustomFormat = "";
             dtpFecha.Format = DateTimePickerFormat.Short;
+            dtpFecha.ImeMode = ImeMode.NoControl;
             dtpFecha.Location = new Point(128, 127);
             dtpFecha.Margin = new Padding(4, 3, 4, 3);
             dtpFecha.Name = "dtpFecha";
             dtpFecha.Size = new Size(256, 26);
             dtpFecha.TabIndex = 3;
+            dtpFecha.Value = new DateTime(2025, 12, 11, 1, 51, 50, 0);
+            // 
+            // cmbCategoria
+            // 
+            cmbCategoria.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbCategoria.FormattingEnabled = true;
+            cmbCategoria.Location = new Point(128, 81);
+            cmbCategoria.Margin = new Padding(4, 3, 4, 3);
+            cmbCategoria.Name = "cmbCategoria";
+            cmbCategoria.Size = new Size(256, 28);
+            cmbCategoria.TabIndex = 2;
             // 
             // txtMonto
             // 
@@ -163,26 +186,6 @@
             label2.Name = "label2";
             label2.Size = new Size(556, 64);
             label2.TabIndex = 8;
-            // 
-            // cmbCategoria
-            // 
-            cmbCategoria.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbCategoria.FormattingEnabled = true;
-            cmbCategoria.Location = new Point(128, 81);
-            cmbCategoria.Margin = new Padding(4, 3, 4, 3);
-            cmbCategoria.Name = "cmbCategoria";
-            cmbCategoria.Size = new Size(256, 28);
-            cmbCategoria.TabIndex = 2;
-            // 
-            // cmbUsuarios
-            // 
-            cmbUsuarios.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbUsuarios.FormattingEnabled = true;
-            cmbUsuarios.Location = new Point(128, 169);
-            cmbUsuarios.Margin = new Padding(4, 3, 4, 3);
-            cmbUsuarios.Name = "cmbUsuarios";
-            cmbUsuarios.Size = new Size(256, 28);
-            cmbUsuarios.TabIndex = 4;
             // 
             // frmAgregarGasto
             // 
