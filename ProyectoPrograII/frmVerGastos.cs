@@ -34,12 +34,13 @@ namespace ProyectoPrograII
 
         private void DataGriedGastos_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            decimal Suma = 0;
-            for (int i = 0; i < DataGriedGastos.Rows.Count; i++)
-            {
-                Suma += Convert.ToDecimal(DataGriedGastos.Rows[i].Cells["Monto"].Value);
-            }
-            txtSuma.Text = Suma.ToString();
+
+
+
+
+
+            
+
 
         }
 
@@ -77,6 +78,74 @@ namespace ProyectoPrograII
             var gastosFiltrados = Gasto.ListaGastos.Where(g => g.Fecha.Date >= fechaInicio && g.Fecha.Date <= fechaFin).ToList();
             DataGriedGastos.DataSource = gastosFiltrados;
 
+        }
+
+        private void DataGriedGastos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Eliminar gasto
+            //Usar botones editar y eliminar
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = DataGriedGastos.Rows[e.RowIndex];
+
+                if (DataGriedGastos.Columns[e.ColumnIndex].Name == "Editar")
+                {
+                    frmModificarGasto modificarGasto = new frmModificarGasto();
+                    string descripcionGasto = row.Cells["Descripcion"].Value.ToString();
+                    Gasto gastoAModificar = Gasto.ListaGastos.FirstOrDefault(g => g.Descripcion == descripcionGasto);
+                    if (gastoAModificar != null)
+                    {
+                        modificarGasto.txtDescripcion.Text = gastoAModificar.Descripcion;
+                        modificarGasto.txtMonto.Text = gastoAModificar.Monto.ToString();
+                        modificarGasto.dtpFecha.Value = gastoAModificar.Fecha;
+                        modificarGasto.cmbCategorias.SelectedItem = gastoAModificar.Categoria;
+                        modificarGasto.ShowDialog();
+                    }
+                    //Eliminar el gasto viejo de la lista
+                    Gasto.ListaGastos.Remove(gastoAModificar);
+
+
+
+                }
+                else if (DataGriedGastos.Columns[e.ColumnIndex].Name == "Eliminar")
+                {
+                    //Eliminar Gasto
+
+                    string descripcionGasto = row.Cells["Descripcion"].Value.ToString();
+                    Gasto gastoAEliminar = Gasto.ListaGastos.FirstOrDefault(g => g.Descripcion == descripcionGasto);
+                    if (gastoAEliminar != null)
+                    {
+                        var resultado = MessageBox.Show("¿Está seguro de que desea eliminar este gasto?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        if (resultado == DialogResult.Yes)
+                        {
+                            Gasto.ListaGastos.Remove(gastoAEliminar);
+                            DataGriedGastos.DataSource = null;
+                            DataGriedGastos.DataSource = Gasto.ListaGastos;
+                        }
+
+
+                    }
+
+                }
+            }
+        }
+
+        private void DataGriedGastos_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+        {
+
+            if (DataGriedGastos.DataSource == null)
+                return;
+
+            decimal Suma = 0;
+            for (int i = 0; i < DataGriedGastos.Rows.Count; i++)
+            {
+                // También verificar que el valor no sea null
+                if (DataGriedGastos.Rows[i].Cells["Monto"].Value != null)
+                {
+                    Suma += Convert.ToDecimal(DataGriedGastos.Rows[i].Cells["Monto"].Value);
+                }
+            }
+            txtSuma.Text = Suma.ToString();
         }
     }
 }

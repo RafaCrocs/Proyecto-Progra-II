@@ -44,8 +44,8 @@
             label7 = new Label();
             btnAgregarGasto = new FontAwesome.Sharp.IconButton();
             DataGriedGastos = new DataGridView();
-            dataGridViewButtonColumn1 = new DataGridViewButtonColumn();
             Eliminar = new DataGridViewButtonColumn();
+            Editar = new DataGridViewButtonColumn();
             label3 = new Label();
             btnLimpiar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)DataGriedGastos).BeginInit();
@@ -221,22 +221,16 @@
             DataGriedGastos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DataGriedGastos.BackgroundColor = Color.White;
             DataGriedGastos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataGriedGastos.Columns.AddRange(new DataGridViewColumn[] { dataGridViewButtonColumn1, Eliminar });
+            DataGriedGastos.Columns.AddRange(new DataGridViewColumn[] { Eliminar, Editar });
             DataGriedGastos.Location = new Point(289, 104);
             DataGriedGastos.Name = "DataGriedGastos";
             DataGriedGastos.RightToLeft = RightToLeft.Yes;
             DataGriedGastos.RowHeadersWidth = 51;
             DataGriedGastos.Size = new Size(640, 317);
             DataGriedGastos.TabIndex = 28;
+            DataGriedGastos.CellContentClick += DataGriedGastos_CellContentClick;
             DataGriedGastos.RowsAdded += DataGriedGastos_RowsAdded;
-            // 
-            // dataGridViewButtonColumn1
-            // 
-            dataGridViewButtonColumn1.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dataGridViewButtonColumn1.FillWeight = 164.467041F;
-            dataGridViewButtonColumn1.HeaderText = "";
-            dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
-            dataGridViewButtonColumn1.Width = 35;
+            DataGriedGastos.RowStateChanged += DataGriedGastos_RowStateChanged;
             // 
             // Eliminar
             // 
@@ -245,6 +239,14 @@
             Eliminar.HeaderText = "";
             Eliminar.Name = "Eliminar";
             Eliminar.Width = 35;
+            // 
+            // Editar
+            // 
+            Editar.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            Editar.FillWeight = 164.467041F;
+            Editar.HeaderText = "";
+            Editar.Name = "Editar";
+            Editar.Width = 35;
             // 
             // label3
             // 
@@ -325,8 +327,8 @@
         private Label label7;
         private FontAwesome.Sharp.IconButton btnAgregarGasto;
         private DataGridView DataGriedGastos;
-        private DataGridViewButtonColumn dataGridViewButtonColumn1;
-        private DataGridViewButtonColumn Eliminar;
         private FontAwesome.Sharp.IconButton btnLimpiar;
+        private DataGridViewButtonColumn Eliminar;
+        private DataGridViewButtonColumn Editar;
     }
 }
